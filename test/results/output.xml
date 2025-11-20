@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.13.9 on win32)" generated="2025-11-20T16:45:23.211636" rpa="false" schemaversion="5">
+<suite id="s1" name="Admin Crud" source="C:\Users\CíceraAdejaneMoreira\Downloads\test\tests\admin_crud.robot">
+<kw name="Open Browser To Base Url" owner="browser" type="SETUP">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-11-20T16:45:23.607591" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\C\u00edceraAdejaneMoreira\\Downloads\\test\\results\\browser\\traces\\temp\\47e6769f-d7ae-40a3-a85a-9449eb864b39"}</msg>
+<msg time="2025-11-20T16:45:23.685931" level="INFO">Starting Browser process C:\Users\CíceraAdejaneMoreira\Downloads\test\.venv\Lib\site-packages\Browser\wrapper\index.js using at 127.0.0.1:61010</msg>
+<msg time="2025-11-20T16:45:25.020562" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\CíceraAdejaneMoreira\\Downloads\\test\\results\\browser\\traces\\temp\\47e6769f-d7ae-40a3-a85a-9449eb864b39"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-11-20T16:45:23.605824" elapsed="1.415067"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-11-20T16:45:25.025310" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": false,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1280,
+    "height": 720
+  }
+}</msg>
+<msg time="2025-11-20T16:45:25.048199" level="INFO">Successfully created context. </msg>
+<msg time="2025-11-20T16:45:25.048284" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': False, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1280, 'height': 720}}</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-11-20T16:45:25.021372" elapsed="0.027072"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-11-20T16:45:26.724724" level="INFO">Successfully initialized new page object and opened url: https://opensource-demo.orangehrmlive.com</msg>
+<arg>${base_url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-11-20T16:45:25.048756" elapsed="1.676205"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-20T16:45:26.726092" level="INFO">${_} = 30s</msg>
+<var>${_}</var>
+<arg>${DEFAULT_TIMEOUT}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-20T16:45:26.725301" elapsed="0.000830"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-20T16:45:28.115084" level="INFO">Waited for Element with selector input[placeholder="Username"] at state visible</msg>
+<arg>${LOGIN_USERNAME_INPUT}</arg>
+<arg>visible</arg>
+<arg>timeout=${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-20T16:45:26.726335" elapsed="1.389060"/>
+</kw>
+<arg>${BASE_URL}</arg>
+<doc>Abre o navegador com Playwright (Browser lib) e acessa a Base URL.</doc>
+<status status="PASS" start="2025-11-20T16:45:23.603953" elapsed="4.511715"/>
+</kw>
+<test id="s1-t1" name="CRUD De Usuário Na Aba Admin" line="20">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-11-20T16:45:28.133833" level="INFO">${rand} = aiumqv</msg>
+<var>${rand}</var>
+<arg>6</arg>
+<arg>[LOWER]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.133188" elapsed="0.000702"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-20T16:45:28.135955" level="INFO">${USERNAME_NEW} = rfuser_aiumqv</msg>
+<var>${USERNAME_NEW}</var>
+<arg>rfuser_${rand}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.135425" elapsed="0.000576"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-11-20T16:45:28.137610" level="INFO">${USERNAME_EDITED} = rfuser_aiumqv_edit</msg>
+<var>${USERNAME_EDITED}</var>
+<arg>rfuser_${rand}_edit</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.137157" elapsed="0.000482"/>
+</kw>
+<kw name="Login With Credentials" owner="LoginPage">
+<kw name="Input Text And Wait" owner="util">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-20T16:45:28.154246" level="INFO">Waited for Element with selector input[placeholder="Username"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<arg>timeout=${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.139582" elapsed="0.015016"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-20T16:45:28.156261" level="INFO">Fills the text 'Admin' in the given field.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.155048" elapsed="0.031276"/>
+</kw>
+<arg>${LOGIN_USERNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Aguarda campo visível e digita texto.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.139236" elapsed="0.047277"/>
+</kw>
+<kw name="Input Text And Wait" owner="util">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-20T16:45:28.201423" level="INFO">Waited for Element with selector input[placeholder="Password"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<arg>timeout=${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.187408" elapsed="0.014218"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2025-11-20T16:45:28.202736" level="INFO">Fills the text 'admin123' in the given field.</msg>
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.201902" elapsed="0.034009"/>
+</kw>
+<arg>${LOGIN_PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Aguarda campo visível e digita texto.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.186786" elapsed="0.049426"/>
+</kw>
+<kw name="Wait For And Click" owner="util">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-20T16:45:28.253062" level="INFO">Waited for Element with selector button[type="submit"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<arg>timeout=${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.237826" elapsed="0.015574"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click" owner="Browser">
+<msg time="2025-11-20T16:45:28.255947" level="INFO">Clicks the element 'button[type="submit"]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.254985" elapsed="0.798173"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Click</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.253936" elapsed="0.799600"/>
+</kw>
+<arg>${LOGIN_SUBMIT_BUTTON}</arg>
+<doc>Aguarda elemento visível e clica com tentativas.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.236739" elapsed="0.817186"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-20T16:45:29.427421" level="INFO">Waited for Element with selector .oxd-userdropdown at state visible</msg>
+<arg>${USER_DROPDOWN}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-20T16:45:29.054308" elapsed="0.373542"/>
+</kw>
+<arg>${USERNAME}</arg>
+<arg>${PASSWORD}</arg>
+<doc>Realiza login robusto com waits dinâmicos e retry.</doc>
+<status status="PASS" start="2025-11-20T16:45:28.138749" elapsed="1.289576"/>
+</kw>
+<kw name="Open Admin Users" owner="AdminUsersPage">
+<kw name="Wait For And Click" owner="util">
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-20T16:45:29.442147" level="INFO">Waited for Element with selector a[href="/web/index.php/admin/viewAdminModule"] at state visible</msg>
+<arg>${locator}</arg>
+<arg>visible</arg>
+<arg>timeout=${DEFAULT_TIMEOUT}</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-11-20T16:45:29.430582" elapsed="0.011918"/>
+</kw>
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Click" owner="Browser">
+<msg time="2025-11-20T16:45:29.444367" level="INFO">Clicks the element 'a[href="/web/index.php/admin/viewAdminModule"]'.</msg>
+<arg>${locator}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-11-20T16:45:29.443555" elapsed="0.650207"/>
+</kw>
+<arg>3x</arg>
+<arg>2s</arg>
+<arg>Click</arg>
+<arg>${locator}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2025-11-20T16:45:29.442941" elapsed="0.650959"/>
+</kw>
+<arg>${ADMIN_MENU}</arg>
+<doc>Aguarda elemento visível e clica com tentativas.</doc>
+<status status="PASS" start="2025-11-20T16:45:29.430082" elapsed="0.664062"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-11-20T16:45:40.239139" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/fail-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/fail-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-20T16:45:40.239333" level="INFO">See also file:///C:/Users/C%C3%ADceraAdejaneMoreira/Downloads/test/results/playwright-log.txt for additional details.</msg>
+<msg time="2025-11-20T16:45:40.239713" level="FAIL">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('a[href="/web/index.php/admin/viewSystemUsers"]') to be visible
+</msg>
+<arg>${USERS_MENU}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="FAIL" start="2025-11-20T16:45:30.094538" elapsed="10.483464">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('a[href="/web/index.php/admin/viewSystemUsers"]') to be visible
+</status>
+</kw>
+<kw name="Wait For And Click" owner="util">
+<arg>${USERS_MENU}</arg>
+<doc>Aguarda elemento visível e clica com tentativas.</doc>
+<status status="NOT RUN" start="2025-11-20T16:45:40.578815" elapsed="0.000361"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<arg>${ADD_BUTTON}</arg>
+<arg>visible</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="NOT RUN" start="2025-11-20T16:45:40.579562" elapsed="0.000200"/>
+</kw>
+<doc>Abre Admin &gt; User Management &gt; Users.</doc>
+<status status="FAIL" start="2025-11-20T16:45:29.429452" elapsed="11.150717">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('a[href="/web/index.php/admin/viewSystemUsers"]') to be visible
+</status>
+</kw>
+<kw name="Create User" owner="AdminUsersPage">
+<arg>${EMPLOYEE_NAME}</arg>
+<arg>${USERNAME_NEW}</arg>
+<arg>${USER_PASSWORD}</arg>
+<arg>${USER_ROLE}</arg>
+<arg>${USER_STATUS}</arg>
+<doc>Cria novo usuário preenchendo formulário e salvando.</doc>
+<status status="NOT RUN" start="2025-11-20T16:45:40.581796" elapsed="0.000244"/>
+</kw>
+<kw name="Search User By Username" owner="AdminUsersPage">
+<arg>${USERNAME_NEW}</arg>
+<doc>Pesquisa usuário pelo Username na lista.</doc>
+<status status="NOT RUN" start="2025-11-20T16:45:40.583429" elapsed="0.000393"/>
+</kw>
+<kw name="Assert User Present" owner="AdminUsersPage">
+<arg>${USERNAME_NEW}</arg>
+<doc>Valida presença do usuário na lista.</doc>
+<status status="NOT RUN" start="2025-11-20T16:45:40.585938" elapsed="0.000558"/>
+</kw>
+<kw name="Edit User Username" owner="AdminUsersPage">
+<arg>${USERNAME_NEW}</arg>
+<arg>${USERNAME_EDITED}</arg>
+<doc>Edita o Username do usuário.</doc>
+<status status="NOT RUN" start="2025-11-20T16:45:40.588629" elapsed="0.000397"/>
+</kw>
+<kw name="Search User By Username" owner="AdminUsersPage">
+<arg>${USERNAME_EDITED}</arg>
+<doc>Pesquisa usuário pelo Username na lista.</doc>
+<status status="NOT RUN" start="2025-11-20T16:45:40.592140" elapsed="0.000346"/>
+</kw>
+<kw name="Assert User Present" owner="AdminUsersPage">
+<arg>${USERNAME_EDITED}</arg>
+<doc>Valida presença do usuário na lista.</doc>
+<status status="NOT RUN" start="2025-11-20T16:45:40.594552" elapsed="0.000320"/>
+</kw>
+<kw name="Delete User By Username" owner="AdminUsersPage">
+<arg>${USERNAME_EDITED}</arg>
+<doc>Exclui usuário pelo Username com confirmação.</doc>
+<status status="NOT RUN" start="2025-11-20T16:45:40.596929" elapsed="0.000523"/>
+</kw>
+<kw name="Search User By Username" owner="AdminUsersPage">
+<arg>${USERNAME_EDITED}</arg>
+<doc>Pesquisa usuário pelo Username na lista.</doc>
+<status status="NOT RUN" start="2025-11-20T16:45:40.598891" elapsed="0.000234"/>
+</kw>
+<kw name="Assert User Absent" owner="AdminUsersPage">
+<arg>${USERNAME_EDITED}</arg>
+<doc>Valida ausência do usuário na lista.</doc>
+<status status="NOT RUN" start="2025-11-20T16:45:40.600514" elapsed="0.000168"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn" type="TEARDOWN">
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-11-20T16:45:40.701312" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-11-20T16:45:40.603021" elapsed="0.098505"/>
+</kw>
+<arg>'${TEST STATUS}'=='FAIL'</arg>
+<arg>Take Screenshot</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2025-11-20T16:45:40.602318" elapsed="0.099329"/>
+</kw>
+<doc>Cria, edita e remove usuário com validações após cada etapa.</doc>
+<tag>admin</tag>
+<tag>regression</tag>
+<status status="FAIL" start="2025-11-20T16:45:28.115941" elapsed="12.586683">TimeoutError: locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+  - waiting for locator('a[href="/web/index.php/admin/viewSystemUsers"]') to be visible
+</status>
+</test>
+<kw name="Close Browser Session" owner="browser" type="TEARDOWN">
+<kw name="Close Browser" owner="Browser">
+<msg time="2025-11-20T16:45:40.823167" level="INFO">Closed browser</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-11-20T16:45:40.718632" elapsed="0.104756"/>
+</kw>
+<doc>Fecha o navegador atual.</doc>
+<status status="PASS" start="2025-11-20T16:45:40.717686" elapsed="0.105840"/>
+</kw>
+<status status="FAIL" start="2025-11-20T16:45:23.213846" elapsed="17.609738"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">admin</stat>
+<stat pass="0" fail="1" skip="0">regression</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Admin Crud">Admin Crud</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

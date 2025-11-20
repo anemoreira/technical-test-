@@ -1,0 +1,9 @@
+version: '3.8'
+services:
+  rf-tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rf-tests:latest
+    volumes:
+      - ./results:/opt/robot/results

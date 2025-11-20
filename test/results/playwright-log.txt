@@ -1,0 +1,90 @@
+{"level":30,"time":"2025-11-20T19:45:24.239Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Listening on 127.0.0.1:61010"}
+{"level":30,"time":"2025-11-20T19:45:24.768Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method newBrowser"}
+{"level":30,"time":"2025-11-20T19:45:25.015Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Adding browser to stack: chromium, version: 141.0.7390.37"}
+{"level":30,"time":"2025-11-20T19:45:25.016Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Adding 0 contexts to browser"}
+{"level":30,"time":"2025-11-20T19:45:25.017Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method newBrowser"}
+{"level":30,"time":"2025-11-20T19:45:25.030Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method newContext"}
+{"level":30,"time":"2025-11-20T19:45:25.030Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Creating new context with options: {\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}}"}
+{"level":30,"time":"2025-11-20T19:45:25.031Z","pid":15172,"hostname":"FORLOGIC1247","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@4e642b2b2ea4c899759bf0beac57e3a4\"},\"headless\":true,\"_contextStack\":[],\"id\":\"browser=42e80471-9831-4176-ac22-397c760b2bda\"}"}
+{"level":30,"time":"2025-11-20T19:45:25.031Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Trace file: "}
+{"level":30,"time":"2025-11-20T19:45:25.045Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Setting default timeout for context context=426f0fe3-c849-496f-b43c-18495aa0375e to 10000"}
+{"level":30,"time":"2025-11-20T19:45:25.045Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Changed active context: context=426f0fe3-c849-496f-b43c-18495aa0375e"}
+{"level":30,"time":"2025-11-20T19:45:25.045Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method newContext"}
+{"level":30,"time":"2025-11-20T19:45:25.051Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method newPage"}
+{"level":30,"time":"2025-11-20T19:45:25.052Z","pid":15172,"hostname":"FORLOGIC1247","msg":"currentBrowser: {\"name\":\"chromium\",\"browser\":{\"_type\":\"Browser\",\"_guid\":\"browser@4e642b2b2ea4c899759bf0beac57e3a4\"},\"headless\":true,\"_contextStack\":[{\"id\":\"context=426f0fe3-c849-496f-b43c-18495aa0375e\",\"c\":{\"_type\":\"BrowserContext\",\"_guid\":\"browser-context@f9c32a0b7a18cdd77c962d6a948f90b3\"},\"pageStack\":[],\"options\":{\"acceptDownloads\":true,\"bypassCSP\":false,\"forcedColors\":\"none\",\"ignoreHTTPSErrors\":false,\"javaScriptEnabled\":true,\"offline\":false,\"reducedMotion\":\"no-preference\",\"serviceWorkers\":\"allow\",\"viewport\":{\"width\":1280,\"height\":720}},\"traceFile\":\"\"}],\"id\":\"browser=42e80471-9831-4176-ac22-397c760b2bda\"}"}
+{"level":30,"time":"2025-11-20T19:45:25.154Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Video path: undefined"}
+{"level":30,"time":"2025-11-20T19:45:25.154Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Changed active page"}
+{"level":30,"time":"2025-11-20T19:45:26.722Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method newPage"}
+{"level":30,"time":"2025-11-20T19:45:26.728Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:26.729Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Strict mode is enabled, find Locator with input[placeholder=\"Username\"] in page."}
+{"level":30,"time":"2025-11-20T19:45:28.111Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:28.121Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T19:45:28.127Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T19:45:28.141Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:28.141Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Strict mode is enabled, find Locator with input[placeholder=\"Username\"] in page."}
+{"level":30,"time":"2025-11-20T19:45:28.151Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:28.157Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-11-20T19:45:28.157Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Strict mode is enabled, find Locator with input[placeholder=\"Username\"] in page."}
+{"level":30,"time":"2025-11-20T19:45:28.183Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method fillText"}
+{"level":30,"time":"2025-11-20T19:45:28.189Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:28.190Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Strict mode is enabled, find Locator with input[placeholder=\"Password\"] in page."}
+{"level":30,"time":"2025-11-20T19:45:28.198Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:28.204Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method fillText"}
+{"level":30,"time":"2025-11-20T19:45:28.204Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Strict mode is enabled, find Locator with input[placeholder=\"Password\"] in page."}
+{"level":30,"time":"2025-11-20T19:45:28.233Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method fillText"}
+{"level":30,"time":"2025-11-20T19:45:28.239Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:28.239Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-11-20T19:45:28.249Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:28.256Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method click"}
+{"level":30,"time":"2025-11-20T19:45:28.257Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Strict mode is enabled, find Locator with button[type=\"submit\"] in page."}
+{"level":30,"time":"2025-11-20T19:45:29.050Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method click"}
+{"level":30,"time":"2025-11-20T19:45:29.058Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:29.058Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Strict mode is enabled, find Locator with .oxd-userdropdown in page."}
+{"level":30,"time":"2025-11-20T19:45:29.424Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:29.432Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:29.432Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Strict mode is enabled, find Locator with a[href=\"/web/index.php/admin/viewAdminModule\"] in page."}
+{"level":30,"time":"2025-11-20T19:45:29.440Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:29.446Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method click"}
+{"level":30,"time":"2025-11-20T19:45:29.446Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Strict mode is enabled, find Locator with a[href=\"/web/index.php/admin/viewAdminModule\"] in page."}
+{"level":30,"time":"2025-11-20T19:45:30.089Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method click"}
+{"level":30,"time":"2025-11-20T19:45:30.096Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method waitForElementState"}
+{"level":30,"time":"2025-11-20T19:45:30.096Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Strict mode is enabled, find Locator with a[href=\"/web/index.php/admin/viewSystemUsers\"] in page."}
+{"level":30,"time":"2025-11-20T19:45:40.114Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Error of node method  waitForElementState"}
+================= Original suppressed error =================
+locator.waitFor: Timeout 10000ms exceeded.
+Call log:
+[2m  - waiting for locator('a[href="/web/index.php/admin/viewSystemUsers"]') to be visible[22m
+
+    at waitForElementState (C:\Users\CíceraAdejaneMoreira\Downloads\test\.venv\Lib\site-packages\Browser\wrapper\index.js:11721:19)
+    at async PlaywrightServer.waitForElementsState (C:\Users\CíceraAdejaneMoreira\Downloads\test\.venv\Lib\site-packages\Browser\wrapper\index.js:13635:28) {
+  name: 'TimeoutError'
+}
+=============================================================
+{"level":30,"time":"2025-11-20T19:45:40.124Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-11-20T19:45:40.125Z","pid":15172,"hostname":"FORLOGIC1247","Take screenshot with options: ":{"path":"C:\\Users\\CíceraAdejaneMoreira\\Downloads\\test\\results\\browser\\screenshot\\fail-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-11-20T19:45:40.236Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-11-20T19:45:40.610Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method takeScreenshot"}
+{"level":30,"time":"2025-11-20T19:45:40.610Z","pid":15172,"hostname":"FORLOGIC1247","Take screenshot with options: ":{"path":"C:\\Users\\CíceraAdejaneMoreira\\Downloads\\test\\results\\browser\\screenshot\\robotframework-browser-screenshot-1.png","fileType":"png","fullPage":false,"timeout":10000,"omitBackground":false}}
+{"level":30,"time":"2025-11-20T19:45:40.699Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method takeScreenshot"}
+{"level":30,"time":"2025-11-20T19:45:40.708Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T19:45:40.712Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T19:45:40.721Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method closeBrowser"}
+{"level":30,"time":"2025-11-20T19:45:40.729Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Removed page=9ad7cb45-cdda-42e5-89b3-413d68e63cad from context=426f0fe3-c849-496f-b43c-18495aa0375e page stack"}
+{"level":30,"time":"2025-11-20T19:45:40.820Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method closeBrowser"}
+================= Original suppressed error =================
+Error: Browser has been closed.
+    at PlaywrightState.getActiveBrowser (C:\Users\CíceraAdejaneMoreira\Downloads\test\.venv\Lib\site-packages\Browser\wrapper\index.js:12672:15)
+    at PlaywrightServer.getActiveBrowser (C:\Users\CíceraAdejaneMoreira\Downloads\test\.venv\Lib\site-packages\Browser\wrapper\index.js:13622:59)
+    at PlaywrightServer.setTimeout (C:\Users\CíceraAdejaneMoreira\Downloads\test\.venv\Lib\site-packages\Browser\wrapper\index.js:13873:57)
+    at Object.onReceiveHalfClose (C:\Users\CíceraAdejaneMoreira\Downloads\test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server.js:1464:25)
+    at BaseServerInterceptingCall.maybePushNextMessage (C:\Users\CíceraAdejaneMoreira\Downloads\test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:595:31)
+    at BaseServerInterceptingCall.handleEndEvent (C:\Users\CíceraAdejaneMoreira\Downloads\test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:635:14)
+    at ServerHttp2Stream.<anonymous> (C:\Users\CíceraAdejaneMoreira\Downloads\test\.venv\Lib\site-packages\Browser\wrapper\node_modules\@grpc\grpc-js\build\src\server-interceptors.js:394:18)
+    at ServerHttp2Stream.emit (node:events:531:35)
+    at endReadableNT (node:internal/streams/readable:1698:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+=============================================================
+{"level":30,"time":"2025-11-20T19:45:40.827Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T19:45:40.827Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method getBrowserCatalog"}
+{"level":30,"time":"2025-11-20T19:45:40.918Z","pid":15172,"hostname":"FORLOGIC1247","msg":"Start of node method closeAllBrowsers"}
+{"level":30,"time":"2025-11-20T19:45:40.918Z","pid":15172,"hostname":"FORLOGIC1247","msg":"End of node method closeAllBrowsers"}
