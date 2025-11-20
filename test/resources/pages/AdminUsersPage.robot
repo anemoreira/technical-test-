@@ -6,23 +6,16 @@ Resource   ../common/util.robot
 
 *** Keywords ***
 Open Admin Users
-    [Documentation]    Navega para Admin > User Management > Users de forma robusta.
+    Wait For Elements State    ${ADMIN_MENU}    visible    timeout=30s
+    Click    ${ADMIN_MENU}
 
-    # Garante que o menu lateral carregou
-    Wait For Elements State    xpath=//aside    visible    timeout=30s
+    Wait For Elements State    ${USER_MANAGEMENT_TAB}    visible    timeout=20s
+    Click    ${USER_MANAGEMENT_TAB}
 
-    # Clica em Admin no menu lateral
-    Click    xpath=//span[contains(@class,'oxd-main-menu-item-text') and normalize-space()='Admin']
+    Wait For Elements State    ${USERS_MENU}    visible    timeout=20s
+    Click    ${USERS_MENU}
 
-    # Aguarda a barra de navegação superior aparecer
-    Wait For Elements State    xpath=//nav[contains(@class,'oxd-topbar-body-nav')]    visible    timeout=20s
-
-    # Clica em User Management
-    Click    xpath=//span[normalize-space()='User Management']
-
-    # Confirma que a tela de usuários carregou
     Wait For Elements State    ${ADD_BUTTON}    visible    timeout=30s
-
 
 Create User
     [Arguments]    ${employee_name}    ${username}    ${password}    ${role}=ESS    ${status}=Enabled
