@@ -1,7 +1,7 @@
 *** Variables ***
 
 # MENU LATERAL
-${ADMIN_MENU}    xpath=//aside//ul/li[1]/a[contains(@href,'admin')]
+${ADMIN_MENU}    xpath=//a[contains(@class,'oxd-main-menu-item')]//span[normalize-space()='Admin']/ancestor::a
 
 # MENU SUPERIOR ADMIN
 ${USER_MANAGEMENT_TAB}    xpath=//span[normalize-space()='User Management']
