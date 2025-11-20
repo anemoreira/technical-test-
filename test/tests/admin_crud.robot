@@ -9,25 +9,16 @@ Suite Setup       Open Browser To Base Url    ${BASE_URL}
 Suite Teardown    Close Browser Session
 Test Teardown     Run Keyword If    '${TEST STATUS}'=='FAIL'    Take Screenshot
 
-*** Variables ***
-${EMPLOYEE_NAME}      Paul Collings
-${USER_PASSWORD}      Secret123!
-${USER_ROLE}          ESS
-${USER_STATUS}        Enabled
-
-
 *** Test Cases ***
 CRUD Completo Usuário Admin
-    [Documentation]    Cria, edita e remove usuário na aba Admin
-
     ${rand}=    Generate Random String    6    [LOWER]
     ${USERNAME_NEW}=     Set Variable    rfuser_${rand}
     ${USERNAME_EDITED}=  Set Variable    rfuser_${rand}_edit
 
-    Login With Credentials    ${USERNAME}    ${PASSWORD}
+    Login With Credentials
     Open Admin Users
 
-    Create User    ${EMPLOYEE_NAME}    ${USERNAME_NEW}    ${USER_PASSWORD}    ${USER_ROLE}    ${USER_STATUS}
+    Create User    Paul Collings    ${USERNAME_NEW}    Secret123!    ESS    Enabled
     Search User By Username    ${USERNAME_NEW}
     Assert User Present        ${USERNAME_NEW}
 
