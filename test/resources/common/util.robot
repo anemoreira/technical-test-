@@ -22,8 +22,16 @@ Select Dropdown Option
     Click                      ${dropdown_locator}
     Sleep    500ms
 
-    ${option}=    Set Variable
-    ...    xpath=//div[contains(@class,'oxd-select-text-input') and normalize-space()='${option_text}']
+    ${is_status}=    Run Keyword And Return Status
+    ...    Should Contain    ${dropdown_locator}    Status
+
+    IF    ${is_status}
+        ${option}=    Set Variable
+        ...    xpath=//div[contains(@class,'oxd-select-text-input') and normalize-space()='${option_text}']
+    ELSE
+        ${option}=    Set Variable
+        ...    xpath=//div[contains(@class,'oxd-select-dropdown')]//span[normalize-space()='${option_text}']
+    END
 
     Wait Until Keyword Succeeds    5x    2s    Click    ${option}
 
