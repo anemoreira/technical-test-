@@ -16,10 +16,15 @@ Input Text And Wait
 
 Select Dropdown Option
     [Arguments]    ${dropdown_locator}    ${option_text}
-    [Documentation]    Abre dropdown e seleciona a opção pelo texto.
-    Wait For And Click    ${dropdown_locator}
-    ${opt}=    Set Variable    xpath=//div[@role='listbox']//span[normalize-space(.)='${option_text}']
-    Wait For And Click    ${opt}
+
+    Wait For Elements State    ${dropdown_locator}    visible    timeout=20s
+    Click    ${dropdown_locator}
+
+    ${option}=    Set Variable
+    ...    xpath=//div[contains(@class,'oxd-select-dropdown')]//span[normalize-space()='${option_text}']
+
+    Wait For Elements State    ${option}    visible    timeout=20s
+    Click    ${option}
 
 Select Autocomplete Option
     [Arguments]    ${input_locator}    ${option_text}
