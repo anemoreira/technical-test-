@@ -23,7 +23,7 @@ Select Dropdown Option
     Sleep    500ms
 
     ${option}=    Set Variable
-    ...    xpath=//div[contains(@class,'oxd-select-dropdown')]//span[normalize-space()='${option_text}']
+    ...    xpath=//div[contains(@class,'oxd-select-text--active')]//span[normalize-space()='${option_text}']
 
     Wait Until Keyword Succeeds    5x    2s    Click    ${option}
 
