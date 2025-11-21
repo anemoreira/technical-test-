@@ -11,7 +11,7 @@ Suite Teardown    Close Browser Session
 Test Teardown     Run Keyword If    '${TEST STATUS}'=='FAIL'    Take Screenshot
 
 *** Variables ***
-${EMPLOYEE_NAME}      Paul Collings
+${EMPLOYEE_NAME}      Timothy Lewis Amiano
 ${USER_ROLE}          ESS
 ${USER_STATUS}        Enabled
 ${USER_PASSWORD}      Secret123!
