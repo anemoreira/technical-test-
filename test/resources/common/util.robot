@@ -18,12 +18,12 @@ Select Dropdown Option
     [Arguments]    ${dropdown_locator}    ${option_text}
 
     Wait For Elements State    ${dropdown_locator}    visible    timeout=30s
-    Scroll To Element    ${dropdown_locator}
-    Click    ${dropdown_locator}
+    Scroll To Element          ${dropdown_locator}
+    Click                      ${dropdown_locator}
     Sleep    500ms
 
     ${option}=    Set Variable
-    ...    xpath=//div[contains(@class,'oxd-select-text--active')]//span[normalize-space()='${option_text}']
+    ...    xpath=//div[contains(@class,'oxd-select-text-input') and normalize-space()='${option_text}']
 
     Wait Until Keyword Succeeds    5x    2s    Click    ${option}
 
