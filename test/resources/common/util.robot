@@ -17,14 +17,16 @@ Input Text And Wait
 Select Dropdown Option
     [Arguments]    ${dropdown_locator}    ${option_text}
 
-    Wait For Elements State    ${dropdown_locator}    visible    timeout=20s
+    Wait For Elements State    ${dropdown_locator}    visible    timeout=30s
+    Scroll To Element    ${dropdown_locator}
     Click    ${dropdown_locator}
+    Sleep    500ms
 
     ${option}=    Set Variable
     ...    xpath=//div[contains(@class,'oxd-select-dropdown')]//span[normalize-space()='${option_text}']
 
-    Wait For Elements State    ${option}    visible    timeout=20s
-    Click    ${option}
+    Wait Until Keyword Succeeds    5x    2s    Click    ${option}
+
 
 Select Autocomplete Option
     [Arguments]    ${input_locator}    ${option_text}
