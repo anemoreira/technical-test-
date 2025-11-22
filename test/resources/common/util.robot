@@ -20,7 +20,7 @@ Select Dropdown Option
     Wait For Elements State    ${dropdown_locator}    visible    timeout=30s
     Scroll To Element          ${dropdown_locator}
     Click                      ${dropdown_locator}
-    Sleep    500ms
+    Sleep    500ms 
 
     ${is_status}=    Run Keyword And Return Status
     ...    Should Contain    ${dropdown_locator}    Status
@@ -33,7 +33,8 @@ Select Dropdown Option
         ...    xpath=//div[contains(@class,'oxd-select-dropdown')]//span[normalize-space()='${option_text}']
     END
 
-    Wait Until Keyword Succeeds    5x    2s    Click    ${option}
+    Wait For Elements State    ${option}    visible    timeout=10s
+    Wait Until Keyword Succeeds    2x    1s    Click    ${option}
 
 
 Select Autocomplete Option
