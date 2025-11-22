@@ -21,20 +21,12 @@ Select Dropdown Option
     Scroll To Element          ${dropdown_locator}
     Click                      ${dropdown_locator}
     Sleep    500ms 
-
-    ${is_status}=    Run Keyword And Return Status
-    ...    Should Contain    ${dropdown_locator}    Status
-
-    IF    ${is_status}
-        ${option}=    Set Variable
-        ...    xpath=//div[contains(@class,'oxd-select-text-input') and normalize-space()='${option_text}']
-    ELSE
-        ${option}=    Set Variable
-        ...    xpath=//div[contains(@class,'oxd-select-dropdown')]//span[normalize-space()='${option_text}']
-    END
-
+    
+    ${option}=    Set Variable
+    ...    xpath=//div[@role='listbox']//span[normalize-space()='${option_text}']
+    
     Wait For Elements State    ${option}    visible    timeout=10s
-    Wait Until Keyword Succeeds    2x    1s    Click    ${option}
+    Wait Until Keyword Succeeds    5x    1s    Click    ${option}
 
 
 Select Autocomplete Option
