@@ -20,7 +20,7 @@ Select Dropdown Option
     Wait For Elements State    ${dropdown_locator}    visible    timeout=30s
     Scroll To Element          ${dropdown_locator}
     
-    Click    ${dropdown_locator}    force=True 
+    Click    ${dropdown_locator}    force=true 
     
     Sleep    500ms 
     
